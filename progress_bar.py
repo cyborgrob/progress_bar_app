@@ -9,7 +9,7 @@ class ProgressBarApp:
         self.root.title("Work Progress Bar")
 
         # Prompt the user for total hours and already worked minutes
-        self.total_hours = simpledialog.askfloat("Work Hours", "How many hours do you plan to work today?", minvalue=1, maxvalue=24)
+        self.total_hours = simpledialog.askfloat("Work Hours", "How many hours do you plan to work today?", minvalue=0, maxvalue=24)
         self.already_worked_minutes = simpledialog.askinteger("Already Worked", "How many minutes have you already worked today?", minvalue=0, maxvalue=self.total_hours * 60)
 
         self.progress = self.already_worked_minutes * 60        
